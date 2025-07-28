@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Reseña</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h2>Califica tu producto</h2>
+            <form action="guardar_resena.php" method="POST">
+                <label>Producto:</label>
+                <input type="text" name="producto" required />
+                <label>Calificación (1-5):</label>
+                <input type="number" name="calificacion" min="1" max="5" required />
+                <label>Reseña:</label>
+                <textarea name="comentario" required></textarea>
+                <input type="submit" value="Enviar Reseña" />
+            </form>
+        </div>
+    </body>
+</html>

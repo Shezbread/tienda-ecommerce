@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Tienda de Comercio Electrónico</title>
+    </head>
+    <body>
+        <div class="search-container">
+            <input type="text" id="product-search" placeholder="Buscar producto" />
+            <button onclick="searchProducts()">Buscar</button>
+        </div>
+        <div id="results-container"></div>
+
+        <span>Carrito: <span id="carrito-contador">0</span> productos</span>
+        <div id="notification" style="display: none"></div>
+        <ul>
+            <li><a href="review_form.html">Calificar un producto</a></li>
+            <li><a href="ver_reseñas.php">Ver reseñas</a></li>
+            <li><a href="pedido_form.html">Registrar un pedido</a></li>
+            <li><a href="ver_pedidos.php">Ver pedidos</a></li>
+            <li><a href="carrito.php">Ir al carrito de compras</a></li>
+            <li><a href="form_producto.html">Agregar Producto</a></li>
+            <li><a href="form_cliente.html">Registrar Cliente</a></li>
+            <li><a href="form_compra.html">Registrar Compra</a></li>
+            <li><a href="mostrar_datos.php">Ver Productos y Clientes</a></li>
+            <li><a href="mostrar_compra.php">Ver Contenido de Compra</a></li>
+            <li><a href="consulta_compras.php">Ver Clientes con más de dos Compras</a></li>
+        </ul>
+
+        <script src="script.js"></script>
+    </body>
+</html>

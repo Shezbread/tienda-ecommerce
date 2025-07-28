@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Registrar Cliente</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h2>Registrar Cliente</h2>
+        <form action="insertar_cliente.php" method="POST" onsubmit="return validarCliente()">
+            ID Cliente: <input type="number" name="id_cliente" required /><br /><br />
+            Nombre: <input type="text" name="nombre" required /><br /><br />
+            Email: <input type="email" name="email" required /><br /><br />
+            Dirección: <textarea name="direccion" required></textarea><br /><br />
+            <input type="submit" value="Registrar Cliente" />
+        </form>
+        <script>
+            function validarCliente() {
+                const email = document.querySelector('input[name="email"]').value;
+                if (!email.includes("@")) {
+                    alert("Por favor, ingresa un correo electrónico válido.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>

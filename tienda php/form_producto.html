@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Agregar Producto</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h2>Agregar Producto</h2>
+        <form action="insertar_producto.php" method="POST" onsubmit="return validarProducto()">
+            ID Producto: <input type="number" name="id_producto" required /><br />
+            Nombre: <input type="text" name="nombre" required /><br />
+            Descripción: <textarea name="descripcion" required></textarea><br />
+            Categoría:
+            <select name="categoria" required>
+                <option value="">-- Selecciona categoría --</option>
+                <option value="Tecnología">Tecnología</option>
+                <option value="Hogar">Hogar</option>
+                <option value="Deportes">Deportes</option>
+                <option value="Moda">Moda</option>
+                <option value="Salud">Salud</option></select
+            ><br /><br />
+            Precio: <input type="number" name="precio" step="0.01" required /><br />
+            Stock: <input type="number" name="stock" required /><br />
+            <input type="submit" value="Agregar" />
+        </form>
+
+        <script>
+            function validarProducto() {
+                let precio = document.querySelector('input[name="precio"]').value;
+                let stock = document.querySelector('input[name="stock"]').value;
+                if (precio <= 0 || stock < 0) {
+                    alert("Precio y stock deben ser positivos.");
+                    return false;
+                }
+                return true;
+            }
+        </script>
+    </body>
+</html>

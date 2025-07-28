@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Registrar Compra</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <h2>Registrar Compra</h2>
+        <form action="insertar_compra.php" method="POST">
+            ID Producto: <input type="number" name="id_producto" required /><br />
+            ID Cliente: <input type="number" name="id_cliente" required /><br />
+            Cantidad: <input type="number" name="cantidad" required /><br />
+            Fecha: <input type="date" name="fecha" required /><br />
+            Total: <input type="number" name="total" step="0.01" required /><br />
+            <input type="submit" value="Registrar Compra" />
+        </form>
+    </body>
+</html>
